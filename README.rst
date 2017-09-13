@@ -5,7 +5,7 @@ django-vaultkeeper-adaptor
     :target: https://travis-ci.org/praekeltfoundation/vaultkeeper
 
 .. image:: https://img.shields.io/codecov/c/github/praekeltfoundation/django-vaultkeeper-adaptor/master.svg?style=flat-square
-    :target: https://codecov.io/github/praekeltfoundation/vaultkeeper?branch=master
+    :target: https://codecov.io/github/praekeltfoundation/vaultkeeper?branch=develop
 
 Installing the Package
 ~~~~~~~~~~~~~~~~~~~~~~
