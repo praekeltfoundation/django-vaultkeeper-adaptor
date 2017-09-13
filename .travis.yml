@@ -6,7 +6,7 @@ before_install:
   - pip install --upgrade pip
 install:
   - pip install codecov
-  - pip install -r dev-requirements.txt
+  - pip install -e .[test]
 script:
   - pytest --cov
   - flake8 .

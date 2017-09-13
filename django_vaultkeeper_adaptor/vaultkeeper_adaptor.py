@@ -1,12 +1,6 @@
 import dj_database_url
 
 
-def removekey(d, key):
-    r = dict(d)
-    del r[key]
-    return r
-
-
 def build_ids_url(backend, endpoint, identifier, secret):
     return '{0}{1}:{2}@{3}'.format(
         prefixes[backend.lower()],
@@ -52,7 +46,6 @@ class VKAdaptor(object):
         self.DATABASES.update(db)
         return d
 
-
     def get_broker_url(self, secret):
         url = build_ids_url(secret['backend'],
                             secret['endpoint'],
@@ -60,6 +53,7 @@ class VKAdaptor(object):
                             secret['password'])
         self.BROKER_URL = url
         return self.BROKER_URL
+
 
 prefixes = {
     'postgresql': 'postgres://',
@@ -69,4 +63,3 @@ prefixes = {
 db_backends = [
     'postgresql',
 ]
-
