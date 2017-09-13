@@ -30,11 +30,9 @@ class VKAdaptor(object):
 
         try:
             with open(self.config_path) as f:
-                data = json.load(f)
-                self.data = data
-        except IOError:
-            raise IOError("Error: File {} not found.".format(
-                          self.config_path))
+                self.data = json.load(f)
+        except IOError as (errno, strerror):
+            raise IOError("I/O error({0}): {1}".format(errno, strerror))
 
     def process_all(self):
         for entry in self.data:
