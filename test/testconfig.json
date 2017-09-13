@@ -1,0 +1,38 @@
+[
+    {
+        "id": "default",
+        "backend": "postgresql",
+        "endpoint": "0.0.0.0:5432/mydb",
+        "vault_path": "database/creds/psql-rw",
+        "schema": "public",
+        "policy": "psql-rw",
+        "set_role": "app_owner",
+        "username": "ptest",
+        "password": "ppass",
+        "lease_duration": 100,
+        "renewable": true
+    },
+    {
+        "id": "auxiliary",
+        "backend": "postgresql",
+        "endpoint": "1.1.1.1:5432/mydb1",
+        "vault_path": "database/creds/psql-rw-ax",
+        "schema": "public",
+        "policy": "psql-rw-ax",
+        "set_role": "app_owner1",
+        "username": "ptest1",
+        "password": "ppass1",
+        "lease_duration": 100,
+        "renewable": true
+    },
+    {
+        "id": "broker1",
+        "backend": "rabbitmq",
+        "endpoint": "0.0.0.0:5672/myvhost",
+        "vault_path": "/rabbitmq/creds/ampq-worker",
+        "username": "rtest",
+        "password": "rpass",
+        "vhost": "myvhost",
+        "policy": "ampq-worker"
+  }
+]
