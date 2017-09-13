@@ -1,5 +1,5 @@
-import pytest
 from ..vaultkeeper_adaptor import VKAdaptor
+
 
 class TestAdaptor(object):
 
@@ -45,8 +45,8 @@ class TestAdaptor(object):
         self.DATABASES = {}
         self.BROKER_URL = ''
         self.adaptor = VKAdaptor(data=self.data,
-                                     DATABASES=self.DATABASES,
-                                     BROKER_URL=self.BROKER_URL)
+                                 DATABASES=self.DATABASES,
+                                 BROKER_URL=self.BROKER_URL)
 
     def test_get_broker_url(self):
         broker = self.data[2]
